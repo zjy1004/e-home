@@ -9,7 +9,6 @@
           {{contentData.content}}
         </div>
       </div>
-
     </div>
 </template>
 
