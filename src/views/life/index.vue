@@ -6,25 +6,25 @@
       </div>
       <div class="menu-wrap">
         <div class="row1">
-          <router-link to="/" class="menu-item">
+          <router-link to="/politics" class="menu-item">
             <div class="img-wrap"><img src="../../../static/imgs/icon1.png" alt=""></div>
             <div class="title-wrap">政治学习</div>
           </router-link>
-          <router-link to="/" class="menu-item">
+          <router-link to="/report" class="menu-item">
             <div class="img-wrap"><img src="../../../static/imgs/icon2.png" alt=""></div>
             <div class="title-wrap">思想汇报</div>
           </router-link>
-          <router-link to="/" class="menu-item">
+          <router-link to="/summarize" class="menu-item">
             <div class="img-wrap"><img src="../../../static/imgs/icon3.png" alt=""></div>
             <div class="title-wrap">心得总结</div>
           </router-link>
         </div>
         <div class="row2">
-          <router-link to="/" class="menu-item">
+          <router-link to="/critic" class="menu-item">
             <div class="img-wrap"><img src="../../../static/imgs/icon4.png" alt=""></div>
             <div class="title-wrap">民主评议</div>
           </router-link>
-          <router-link to="/" class="menu-item">
+          <router-link to="/find" class="menu-item">
             <div class="img-wrap" style="margin-top: 20px"><img src="../../../static/imgs/icon5.png" alt=""></div>
             <div class="title-wrap">流动党员找组织</div>
           </router-link>

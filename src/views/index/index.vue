@@ -92,7 +92,7 @@
         </div>
       </div>
       <!-- foote-menu start -->
-      <div style="height: 45px;"></div>
+      <div style="height: 50px;"></div>
       <Footer></Footer>
     </div>
 </template>

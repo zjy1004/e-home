@@ -1,8 +1,9 @@
 import axios from 'axios'
 import qs from 'qs'
 
+const baseURL = '/api/hhdj';
 const instance = axios.create({
-  baseURL: 'http://211.67.177.56:8080/hhdj',
+  baseURL,
   timeout:15000
 });
 

@@ -52,7 +52,7 @@
             </router-link>
           </div>
           <div class="list">
-            <router-link to="/information" @click="handleInfo">
+            <router-link to="/info" @click="handleInfo">
               <div class="list-item">
                 <div class="img-left" style="background: url('../../../static/imgs/个人信息.png') no-repeat"></div>
                 <div class="item-title">个人信息</div>

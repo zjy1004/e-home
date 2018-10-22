@@ -7,7 +7,8 @@ const components = {
   login: () => import('@/views/login/index'),
 
   mine: () => import('@/views/mine/index'),
-  information: () => import('@/views/mine/information'),
+  updateInfo: () => import('@/views/mine/updateInfo'),
+  info: () => import('@/views/mine/info'),
   intergral: () => import('@/views/mine/intergral'),
   changePwd: () => import('@/views/mine/changePwd'),
   pay: () => import('@/views/mine/pay'),
@@ -23,6 +24,13 @@ const components = {
   today: () => import('@/views/newsPages/today'),
 
   life: () => import('@/views/life/index'),
+  politics: () => import('@/views/newsPages/politics'),
+  report: () => import('@/views/life/report'),
+  summarize: () => import('@/views/life/summarize'),
+  critic: () => import('@/views/life/critic'),
+  find: () => import('@/views/life/find'),
+
+
   interaction: () => import('@/views/interaction/index'),
 
   anytimestudy: () => import('@/views/newsPages/anytimestudy'),
@@ -76,9 +84,14 @@ export default new Router({
       component: components.pay
     },
     {
-      path: '/information',
+      path: '/info',
       name: '个人信息',
-      component: components.information
+      component: components.info
+    },
+    {
+      path: '/updateInfo',
+      name: '修改个人信息',
+      component: components.updateInfo
     },
 
 
@@ -101,6 +114,35 @@ export default new Router({
       name: '掌上组织生活',
       component: components.life
     },
+    {
+      path: '/politics',
+      name: '政治学习',
+      meta: {
+        type: 8
+      },
+      component: components.politics
+    },
+    {
+      path: '/report',
+      name: '思想汇报',
+      component: components.report
+    },
+    {
+      path: '/summarize',
+      name: '心得总结',
+      component: components.summarize
+    },
+    {
+      path: '/critic',
+      name: '民主评议',
+      component: components.critic
+    },
+    {
+      path: '/find',
+      name: '流动党员找组织',
+      component: components.find
+    },
+
     {
       path: '/interaction',
       name: '党员云互动',
