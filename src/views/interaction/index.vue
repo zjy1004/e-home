@@ -12,12 +12,12 @@
           <div class="right"><img src="../../../static/imgs/党员互动icon.png"></div>
         </div>
         <div class="middle">{{item.content}}</div>
-        <div class="bottom"><div><i class="iconfont icon-xiaoxi1"></i><span>回复</span></div></div>
+        <div @click="handleReply(item.forumId)" class="bottom flr clearfix"><i class="iconfont icon-xiaoxi1"></i><span>回复</span></div>
       </div>
     </div>
     <div class="add" @click="handleAdd" v-show="isShow"><img src="../../../static/imgs/发布btn.png"></div>
     <div class="issue-wrap" v-show="!isShow">
-      <textarea name="" id="" cols="50" rows="7" v-model="issue.content"></textarea>
+      <textarea name="" id="textarea" cols="50" rows="7" v-model="issue.content"></textarea>
       <div class="btn-wrap">
         <div @click="handleIssue" class="btn-issue">发布</div>
         <div class="btn-cancel" @click="handleCancel">取消</div>
@@ -27,6 +27,7 @@
 </template>
 
 <script>
+
   import Header from '@/components/Header'
   export default {
     name: "index",
@@ -57,6 +58,9 @@
             }
           })
         },
+      handleReply() {
+
+      },
       handleAdd() {
           this.isShow = false
       },
@@ -138,6 +142,7 @@
     padding: 10px 0;
   }
   .bottom{
+    width: 1.3rem;
     font-size: 14px;
     text-align: right;
     line-height: 21.5px;

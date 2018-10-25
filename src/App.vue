@@ -40,14 +40,14 @@ a{
   top: 0;
   right: 0;
   left: 0;
-  z-index: 998;
+  z-index: 9999;
 }
 .fixB{
   position: fixed;
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 998;
+  z-index: 9999;
 }
 input::-webkit-input-placeholder {
   color:#fff;
