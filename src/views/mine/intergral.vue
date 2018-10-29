@@ -4,7 +4,7 @@
     <div class="banner">
       <div class="score">66.8</div>
     </div>
-    <router-link to="/login" class="detail">
+    <router-link to="/intergralDetail" class="detail">
       <div class="detail-item">
         <div class="img-left" style="background: url('../../../static/imgs/量化积分icon.png') no-repeat"></div>
         <div class="item-title">积分明细</div>

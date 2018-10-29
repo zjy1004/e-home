@@ -1,34 +1,43 @@
 <template>
   <div>
     <Header>{{this.$route.name}}</Header>
-    <div class="content" v-html="htmlData"></div>
+    <div class="content" v-html="content"></div>
   </div>
 </template>
 
 <script>
   import Header from '@/components/Header'
   import cheerio from 'cheerio'
+  import getUrl from '@/getUrl'
   export default {
     components:{
       Header,
     },
     data() {
       return{
-        htmlData: ''
+        content: '',
+        params: {
+          url: ''
+        }
       }
     },
     methods: {
-      getHtml() {
-        this.$axios.get('/proxy/proxy.do?url=http:%2F%2Fcpc.people.com.cn%2FGB%2F64162%2F64165%2F70486%2F70508%2Findex.html').then(res => {
+      getData() {
+        let day = new Date().getDate();
+        let month = new Date().getMonth() + 1;
+        day = day >= 10 ? day + "" : "0" + day;
+        month = month >= 10 ? month + "" : "0" + month;
+        this.params.url = getUrl(month, day)
+        this.$axios.get('/proxy/proxy.do', this.params).then(res => {
+          console.log(res);
           var $ = cheerio.load(res);
-          let html = $('.p1_02').html();
-          console.log(html);
-          this.htmlData = html
+          this.content = $('.p1_02').html();
         })
+
       }
     },
     created() {
-      this.getHtml()
+      this.getData()
     }
   }
 </script>
@@ -49,11 +58,11 @@
     font-weight: 500;
     color: #000;
     line-height: 1.2;
-    margin-bottom: 10px;
   }
   /deep/ p{
     line-height: 2;
     font-size: 14px;
+    padding: 10px;
   }
 }
 </style>

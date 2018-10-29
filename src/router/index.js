@@ -10,6 +10,8 @@ const components = {
   updateInfo: () => import('@/views/mine/updateInfo'),
   info: () => import('@/views/mine/info'),
   intergral: () => import('@/views/mine/intergral'),
+  intergralDetail: () => import('@/views/mine/intergralDetail'),
+
   changePwd: () => import('@/views/mine/changePwd'),
   pay: () => import('@/views/mine/pay'),
 
@@ -72,6 +74,11 @@ export default new Router({
       path: '/intergral',
       name: '个人量化积分',
       component: components.intergral
+    },
+    {
+      path: '/intergralDetail',
+      name: '积分明细',
+      component: components.intergralDetail
     },
     {
       path: '/changePwd',
