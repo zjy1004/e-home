@@ -112,5 +112,14 @@
     line-height: 1.2;
 
   }
+  /deep/ h2{
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+
+  }
 }
 </style>

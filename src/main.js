@@ -7,6 +7,7 @@ import $axios from './axios/index'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import store from './store'
+import 'normalize.css/normalize.css'
 
 
 

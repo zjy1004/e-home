@@ -53,5 +53,7 @@ input::-webkit-input-placeholder {
   color:#fff;
   padding-left: 10px;
 }
-
+h1{
+  margin: 0;
+}
 </style>

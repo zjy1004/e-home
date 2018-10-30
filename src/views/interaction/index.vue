@@ -12,17 +12,18 @@
           <div class="right"><img src="../../../static/imgs/党员互动icon.png"></div>
         </div>
         <div class="middle">{{item.content}}</div>
-        <div @click="handleReply(item.forumId)" class="bottom flr clearfix"><i class="iconfont icon-xiaoxi1"></i><span>回复</span></div>
+        <div class="bottom"><span @click="handleReply(item.forumId)"><i class="iconfont icon-xiaoxi1"></i>回复</span></div>
       </div>
+    </div>
+    <div style="height:3.21rem;" v-show="!isShow"></div>
+    <div class="issue-wrap" v-show="!isShow">
+        <textarea name="" id="textarea" v-model="issue.content"></textarea>
+        <div class="btn-wrap">
+          <div @click="handleIssue" class="btn-issue">发布</div>
+          <div @click="handleCancel" class="btn-cancel">取消</div>
+        </div>
     </div>
     <div class="add" @click="handleAdd" v-show="isShow"><img src="../../../static/imgs/发布btn.png"></div>
-    <div class="issue-wrap" v-show="!isShow">
-      <textarea name="" id="textarea" cols="50" rows="7" v-model="issue.content"></textarea>
-      <div class="btn-wrap">
-        <div @click="handleIssue" class="btn-issue">发布</div>
-        <div class="btn-cancel" @click="handleCancel">取消</div>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -82,11 +83,23 @@
     }
   }
 </script>
+<style>
+  /*html{*/
+    /*height: 100%;*/
+    /*overflow: hidden;*/
+  /*}*/
+  /*body{*/
+    /*height: 100%;*/
+    /*overflow: hidden;*/
+  /*}*/
+
+</style>
 
 <style scoped lang="scss">
 .item{
   width: 100%;
-  height: 2.83rem;
+  height: auto;
+  box-sizing: border-box;
   border-bottom: 10px solid #efeff4;
   .item-wrap{
     color: #444;
@@ -142,11 +155,10 @@
     padding: 10px 0;
   }
   .bottom{
-    width: 1.3rem;
     font-size: 14px;
-    text-align: right;
-    line-height: 21.5px;
     height: 21.5px;
+    line-height: 21.5px;
+    text-align: right;
     /deep/ i{
       font-size: 18px;
       margin-right: 5px;
@@ -167,43 +179,55 @@
   }
   .issue-wrap{
     width: 100%;
-    height: 3.2rem;
+    height:3.21rem;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     background: #f1f1f1;
-    text-align: center;
-    z-index: 998;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 9999;
     textarea{
       outline-color: #fff;
-      margin: 10px 0;
+      color: #111;
+      width: 100%;
+      height: 100px;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 400;
     }
+
+
     .btn-wrap{
-      width: 6.536rem;
-      height: 0.6rem;
-      margin: 0 auto;
+      box-sizing: border-box;
       display: flex;
-      margin-top: -5px;
       justify-content: space-between;
+      padding-bottom: 20px;
       .btn-issue{
+        padding: 1px 3px;
         border-radius: 4px;
         border: 1px solid transparent;
         font-size: 12px;
         line-height: 26px;
+        width: 28px;
+        height: 30px;
         text-align: center;
         background: #ef473a;
         color: #fff;
       }
       .btn-cancel{
+        padding: 1px 3px;
         border-radius: 4px;
         border: 1px solid transparent;
         font-size: 12px;
         line-height: 26px;
+        width: 28px;
+        height: 30px;
+        color: #444;
         text-align: center;
-        background: #fff;
+        background: #f8f8f8;;
       }
-
     }
   }
 </style>

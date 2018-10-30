@@ -83,6 +83,7 @@
           font-weight: 500;
           color: #fff;
           font-size: 18px;
+          margin: 0;
         }
       }
     }
